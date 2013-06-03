@@ -1,0 +1,5 @@
+C:\Temp\Demo code\HHKSprint2\ConsultantJobPortal\ConsultantJobPortal\bin\ConsultantJobPortal.dll
+C:\Temp\Demo code\HHKSprint2\ConsultantJobPortal\ConsultantJobPortal\bin\ConsultantJobPortal.pdb
+C:\Temp\Demo code\HHKSprint2\ConsultantJobPortal\ConsultantJobPortal\obj\Debug\ResolveAssemblyReference.cache
+C:\Temp\Demo code\HHKSprint2\ConsultantJobPortal\ConsultantJobPortal\obj\Debug\ConsultantJobPortal.dll
+C:\Temp\Demo code\HHKSprint2\ConsultantJobPortal\ConsultantJobPortal\obj\Debug\ConsultantJobPortal.pdb

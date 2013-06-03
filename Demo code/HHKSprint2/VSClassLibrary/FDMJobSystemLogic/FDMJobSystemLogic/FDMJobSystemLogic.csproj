@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E687ED29-F30F-4F48-800A-27C16B324212}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FDMJobSystemLogic</RootNamespace>
+    <AssemblyName>FDMJobSystemLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\CommentCommands\DeleteComment.cs" />
+    <Compile Include="Commands\CommentCommands\GetUserIdComment.cs" />
+    <Compile Include="Commands\CommentCommands\InsertComment.cs" />
+    <Compile Include="Commands\CommentCommands\ViewComments.cs" />
+    <Compile Include="Commands\FavouriteCommands\DelFav.cs" />
+    <Compile Include="Commands\FavouriteCommands\InserFav.cs" />
+    <Compile Include="Commands\FavouriteCommands\GetFav.cs" />
+    <Compile Include="Commands\JobCommands\AccountManagerJobCommands\MyJobs.cs" />
+    <Compile Include="Commands\JobCommands\DeleteJob.cs" />
+    <Compile Include="Commands\JobCommands\GetCompanyForAutoFill.cs" />
+    <Compile Include="Commands\JobCommands\RetrieveJobDetails.cs" />
+    <Compile Include="Commands\JobCommands\GetJobID.cs" />
+    <Compile Include="Commands\JobCommands\GetLocationForAutoFill.cs" />
+    <Compile Include="Commands\JobCommands\GetSkills.cs" />
+    <Compile Include="Commands\JobCommands\GetStatusID.cs" />
+    <Compile Include="Commands\JobCommands\GetStreamID.cs" />
+    <Compile Include="Commands\JobCommands\IRetrieveJobDetails.cs" />
+    <Compile Include="Commands\JobCommands\InsertJob.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\JobCommands\UpdateJob.cs" />
+    <Compile Include="Commands\RecommendationCommands\GetRecommendations.cs" />
+    <Compile Include="Commands\RecommendationCommands\IGetRecommendations.cs" />
+    <Compile Include="Commands\RecommendationCommands\InsertRecommendation.cs" />
+    <Compile Include="Commands\UserCommands\DeleteUser.cs" />
+    <Compile Include="Commands\UserCommands\DeleteUserSkill.cs" />
+    <Compile Include="Commands\UserCommands\EditPassword.cs" />
+    <Compile Include="Commands\UserCommands\EditProfile.cs" />
+    <Compile Include="Commands\UserCommands\FindUser.cs" />
+    <Compile Include="Commands\UserCommands\UserLocForAutoFill.cs" />
+    <Compile Include="Email\ForgottenPassword.cs" />
+    <Compile Include="Commands\UserCommands\GetTStatusID.cs" />
+    <Compile Include="Commands\UserCommands\GetUserSkills.cs" />
+    <Compile Include="Commands\UserCommands\InsertUserSkill.cs" />
+    <Compile Include="Commands\UserCommands\UserProfile.cs" />
+    <Compile Include="DBClasses\DbComments.cs" />
+    <Compile Include="DBClasses\DbRecommendation.cs" />
+    <Compile Include="Email\ApplyForJob.cs" />
+    <Compile Include="Email\DbEmail.cs" />
+    <Compile Include="Email\EmailAccountManager.cs" />
+    <Compile Include="Email\ISendEmail.cs" />
+    <Compile Include="Email\SendComInteropEmail.cs" />
+    <Compile Include="Factories\CommandFactory.cs" />
+    <Compile Include="Commands\UserCommands\InsertUser.cs" />
+    <Compile Include="Commands\ConnectionString.cs" />
+    <Compile Include="Commands\IReadOneCommand.cs" />
+    <Compile Include="Commands\ReadOneCommand.cs" />
+    <Compile Include="DBClasses\DbJob.cs" />
+    <Compile Include="Factories\IReadCommandFactory.cs" />
+    <Compile Include="Factories\IReadOneCommandFactory.cs" />
+    <Compile Include="Factories\IWriteCommandFactory.cs" />
+    <Compile Include="Commands\JobCommands\InsertSkill.cs" />
+    <Compile Include="Commands\JobCommands\InsertJobSkill.cs" />
+    <Compile Include="Commands\JobCommands\GetSkillID.cs" />
+    <Compile Include="Commands\JobCommands\GetStatus.cs" />
+    <Compile Include="Factories\IReadSearchFactory.cs" />
+    <Compile Include="Commands\JobCommands\GetOneStatus.cs" />
+    <Compile Include="Commands\JobCommands\GetOneStream.cs" />
+    <Compile Include="Commands\JobCommands\GetJobSkills.cs" />
+    <Compile Include="Commands\UserCommands\GetOneUser.cs" />
+    <Compile Include="Login\ILoginCommand.cs" />
+    <Compile Include="Login\ILoginfactory.cs" />
+    <Compile Include="Commands\IReadCommand.cs" />
+    <Compile Include="Commands\IWriteCommand.cs" />
+    <Compile Include="Login\Login.cs" />
+    <Compile Include="Login\LoginCommand2.cs" />
+    <Compile Include="Options\GetOptions.cs" />
+    <Compile Include="Options\IGetOptions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Commands\ReadCommand.cs" />
+    <Compile Include="Commands\JobCommands\RecentJobs.cs" />
+    <Compile Include="Searches\SearchConsultants\ISearch.cs" />
+    <Compile Include="Searches\SearchConsultants\SearchConsultants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Searches\SearchGetStream.cs" />
+    <Compile Include="Searches\SearchGetUserType.cs" />
+    <Compile Include="Email\SendEmail.cs" />
+    <Compile Include="Searches\SearchJobs\ISearchJob.cs" />
+    <Compile Include="Searches\SearchJobs\SearchJobs.cs" />
+    <Compile Include="Service\IJSService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\JSService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Session\ISessionControlCommand.cs" />
+    <Compile Include="Session\ISessionControlFactory.cs" />
+    <Compile Include="Session\SessionControl.cs" />
+    <Compile Include="Session\SessionControlCommand.cs" />
+    <Compile Include="DBClasses\DbUser.cs" />
+    <Compile Include="Commands\WriteCommand.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Outlook">
+      <Guid>{00062FFF-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

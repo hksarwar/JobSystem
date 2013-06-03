@@ -1,0 +1,138 @@
+CHARTER
+-----------------------------------------------
+Analyise Trainee's functionality and report on potentail areas of risk
+
+#AREAS
+OS | Windows XP
+Strategy | Function Testing
+Strategy | Functional Analysis
+START
+-----------------------------------------------
+31/01/13 10.55 am
+TESTER
+-----------------------------------------------
+Stephen Harbage
+TASK BREAKDOWN
+-----------------------------------------------
+
+#DURATION
+short
+
+#TEST DESIGN AND EXECUTION
+30
+
+#BUG INVESTIGATION AND REPORTING
+10
+
+#SESSION SETUP
+25
+
+#CHARTER VS. OPPORTUNITY
+100/0
+DATA FILES
+-----------------------------------------------
+#N/A
+TEST NOTES
+-----------------------------------------------
+
+Tried to login and it got 404 error. Spoke to devs and they said it was the wrong application
+
+tried valid and invalid logins:
+valid user and invalid password
+valid password invalid user
+#
+
+
+I tried one username that should not have worked, the devs said they can changed the test data I had without telling me
+
+Pressed 'select' on a number of jobs
+
+I tested favourties functionality - adding, viewing and deleting
+
+Account Managers
+Email them
+
+My Profile
+- edited name
+- edited 
+
+Logoff
+- cancel and ok
+
+BUGS
+-----------------------------------------------
+#BUG 1
+forgotton password link does not take user anywhere when clicked on
+
+#Bug 1.2
+'Forgot password'
+
+#BUG 2
+'ViewComments' - no spaces
+
+#BUG 3
+'AddToFavourites'
+
+#BUG 4
+seconds are on deadline
+
+#BUG 5
+'DatePosted'
+
+#BUG 6
+'Add to favourites' no message to confirm have added
+
+#BUG 7
+Pressing on a colomn header does not reorder list
+
+#BUG 8
+'DeleteFrom Favourites'
+
+#BUG 9
+Have to click to view comments, should just show at the bottom of a selected job
+
+#BUG 10
+'Hide' not clear - close would be clearer
+
+#BUG 11
+when deleting a favourite, pop up title is: 'The page at localhost:4848 says:'
+
+#BUG 12 - retest
+When pressing on 'ok' to delete from favourites screen stays the same and is not deleted
+
+#bug 12.1
+'favourite has been deleted' not 'is'
+
+#BUG 13
+Pressing on account>mangers>email does nothing, screen stays on same page
+
+#BUG 14
+says 'logoff' instead of 'log out'
+
+#BUG 15
+says 'log off' in tabs but 'log out' on logoff page
+
+#BUG 16
+on My Profile>scroll to bottom of list, white at the bottom
+
+#BUG 17
+On a job, the account manager is not a link
+
+#BUG 18
+Crash when clicking on remove a skill. Many issues with editing this page (see issue 4)
+
+#BUG 19
+When I made it crashed and then re-ran program it then 
+
+-----------------------------------------------
+#ISSUE 1
+Keep coming up against usernames and passwords that should work that don't - eg richard.scott - will get an updated list from devs after session. Need to do this to properly test valid/invalid logins
+
+#ISSUE 2
+Title of job should perhaps be at the top of the job as is confusing which job it is
+
+#ISSUE 3
+Could have phone numbers for account managers and consultants/trainees too. They would need to be able to update these.
+
+#ISSUE 4
+How to update details is confusing. Needs to be looked at. Will explain to dev

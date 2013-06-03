@@ -1,0 +1,7 @@
+C:\Temp\Demo code\HHKSprint2\TrainerWebApp\TrainerWebApp\obj\Debug\ResolveAssemblyReference.cache
+C:\Temp\Demo code\HHKSprint2\TrainerWebApp\TrainerWebApp\obj\Debug\Interop.Microsoft.Office.Interop.OutlookViewCtl.dll
+C:\Temp\Demo code\HHKSprint2\TrainerWebApp\TrainerWebApp\obj\Debug\TrainerWebApp.csproj.ResolveComReference.cache
+C:\Temp\Demo code\HHKSprint2\TrainerWebApp\TrainerWebApp\bin\TrainerWebApp.dll
+C:\Temp\Demo code\HHKSprint2\TrainerWebApp\TrainerWebApp\bin\TrainerWebApp.pdb
+C:\Temp\Demo code\HHKSprint2\TrainerWebApp\TrainerWebApp\obj\Debug\TrainerWebApp.dll
+C:\Temp\Demo code\HHKSprint2\TrainerWebApp\TrainerWebApp\obj\Debug\TrainerWebApp.pdb

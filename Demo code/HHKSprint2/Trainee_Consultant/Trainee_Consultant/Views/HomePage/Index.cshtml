@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Trainee_Consultant.Models.RecentJobsModel>
+           
+@{
+    ViewBag.Title = "Home Page";
+}
+<br />
+
+<h2>@ViewBag.Message</h2>
+<p>
+    Text Goes Here!
+</p>
+
+<h3>Recent Jobs</h3>
+
+<p>
+       Jobs Added in the last 7 Days
+</p>
+<br />
+<div>
+        <table class="table">
+            <tr>
+                <th>Date Posted</th>
+                <th>Job Title</th>
+                <th>Company</th>
+                <th>Location</th> 
+                <th>Stream</th>
+                <th>Status</th>
+                <th>Deadline</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.datePosted)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.company)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.location)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.stream)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.status)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.deadline)
+                    </td>
+                </tr>
+            }
+        </table>
+</div>

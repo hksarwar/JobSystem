@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="JSService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1727/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1727/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1727/Service1.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:1727/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/FDMJobSystemLogic" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IJSService_GetStreams_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStreams" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_GetStreams_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStreamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_FormatSkill_InputMessage">
+    <wsdl:part name="parameters" element="tns:FormatSkill" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_FormatSkill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FormatSkillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_GetTStatuses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTStatuses" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_GetTStatuses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTStatusesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_SearchForConsultants_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchForConsultants" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_SearchForConsultants_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchForConsultantsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_GetProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfile" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_GetProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_AddComment_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddComment" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_AddComment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_ViewComments_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewComments" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_ViewComments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewCommentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_DeleteComment_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteComment" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_DeleteComment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_GetUserIdByCommentId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserIdByCommentId" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_GetUserIdByCommentId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserIdByCommentIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_InsertFavourite_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFavourite" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_InsertFavourite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFavouriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_DeleteFavourite_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFavourite" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_DeleteFavourite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFavouriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_GetListOfFavJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListOfFavJobs" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_GetListOfFavJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListOfFavJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_Login2_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login2" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_Login2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Login2Response" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_Logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_Logout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_GetUserType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserType" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_GetUserType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_GetStreamList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStreamList" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_GetStreamList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStreamListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_GetNumOfUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumOfUsers" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_GetNumOfUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumOfUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_InsertUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUser" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_InsertUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_FindUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindUser" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_FindUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_GetUserByUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByUserName" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_GetUserByUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_CheckAccManagerJobExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckAccManagerJobExists" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_CheckAccManagerJobExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckAccManagerJobExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_GetOneUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOneUser" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_GetOneUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOneUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_FindUsernameBySessionId_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindUsernameBySessionId" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_FindUsernameBySessionId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindUsernameBySessionIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_DisplayProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayProfile" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_DisplayProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_UpdateProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProfile" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_UpdateProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_AddUserSkill_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserSkill" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_AddUserSkill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserSkillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_RemoveUserSkill_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserSkill" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_RemoveUserSkill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserSkillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_InsertJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertJob" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_InsertJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_InsertSkill_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSkill" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_InsertSkill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSkillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_RecentJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecentJobs" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_RecentJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecentJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_GetJobSkills_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobSkills" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_GetJobSkills_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobSkillsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_UpdateUserIdOfAJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserIdOfAJob" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_UpdateUserIdOfAJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserIdOfAJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_UpdateAMJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAMJob" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_UpdateAMJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAMJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_UpdateDeletedJobSkill_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDeletedJobSkill" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_UpdateDeletedJobSkill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDeletedJobSkillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_UpdateAddedJobSkill_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAddedJobSkill" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_UpdateAddedJobSkill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAddedJobSkillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_DeleteJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteJob" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_DeleteJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_DisplaySkills_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisplaySkills" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_DisplaySkills_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisplaySkillsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_GetStatuses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatuses" />
+  </wsdl:message>
+  <wsdl:message name="IJSService_GetStatuses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IJSService">
+    <wsdl:operation name="GetStreams">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/GetStreams" message="tns:IJSService_GetStreams_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/GetStreamsResponse" message="tns:IJSService_GetStreams_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FormatSkill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/FormatSkill" message="tns:IJSService_FormatSkill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/FormatSkillResponse" message="tns:IJSService_FormatSkill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTStatuses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/GetTStatuses" message="tns:IJSService_GetTStatuses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/GetTStatusesResponse" message="tns:IJSService_GetTStatuses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchForConsultants">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/SearchForConsultants" message="tns:IJSService_SearchForConsultants_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/SearchForConsultantsResponse" message="tns:IJSService_SearchForConsultants_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/GetProfile" message="tns:IJSService_GetProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/GetProfileResponse" message="tns:IJSService_GetProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddComment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/AddComment" message="tns:IJSService_AddComment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/AddCommentResponse" message="tns:IJSService_AddComment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewComments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/ViewComments" message="tns:IJSService_ViewComments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/ViewCommentsResponse" message="tns:IJSService_ViewComments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteComment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/DeleteComment" message="tns:IJSService_DeleteComment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/DeleteCommentResponse" message="tns:IJSService_DeleteComment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserIdByCommentId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/GetUserIdByCommentId" message="tns:IJSService_GetUserIdByCommentId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/GetUserIdByCommentIdResponse" message="tns:IJSService_GetUserIdByCommentId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertFavourite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/InsertFavourite" message="tns:IJSService_InsertFavourite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/InsertFavouriteResponse" message="tns:IJSService_InsertFavourite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFavourite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/DeleteFavourite" message="tns:IJSService_DeleteFavourite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/DeleteFavouriteResponse" message="tns:IJSService_DeleteFavourite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListOfFavJobs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/GetListOfFavJobs" message="tns:IJSService_GetListOfFavJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/GetListOfFavJobsResponse" message="tns:IJSService_GetListOfFavJobs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/Login" message="tns:IJSService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/LoginResponse" message="tns:IJSService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/Login2" message="tns:IJSService_Login2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/Login2Response" message="tns:IJSService_Login2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/Logout" message="tns:IJSService_Logout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/LogoutResponse" message="tns:IJSService_Logout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/GetUserType" message="tns:IJSService_GetUserType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/GetUserTypeResponse" message="tns:IJSService_GetUserType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStreamList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/GetStreamList" message="tns:IJSService_GetStreamList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/GetStreamListResponse" message="tns:IJSService_GetStreamList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumOfUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/GetNumOfUsers" message="tns:IJSService_GetNumOfUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/GetNumOfUsersResponse" message="tns:IJSService_GetNumOfUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/InsertUser" message="tns:IJSService_InsertUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/InsertUserResponse" message="tns:IJSService_InsertUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/FindUser" message="tns:IJSService_FindUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/FindUserResponse" message="tns:IJSService_FindUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByUserName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/GetUserByUserName" message="tns:IJSService_GetUserByUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/GetUserByUserNameResponse" message="tns:IJSService_GetUserByUserName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/DeleteUser" message="tns:IJSService_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/DeleteUserResponse" message="tns:IJSService_DeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckAccManagerJobExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/CheckAccManagerJobExists" message="tns:IJSService_CheckAccManagerJobExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/CheckAccManagerJobExistsResponse" message="tns:IJSService_CheckAccManagerJobExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOneUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/GetOneUser" message="tns:IJSService_GetOneUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/GetOneUserResponse" message="tns:IJSService_GetOneUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUsernameBySessionId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/FindUsernameBySessionId" message="tns:IJSService_FindUsernameBySessionId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/FindUsernameBySessionIdResponse" message="tns:IJSService_FindUsernameBySessionId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisplayProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/DisplayProfile" message="tns:IJSService_DisplayProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/DisplayProfileResponse" message="tns:IJSService_DisplayProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/UpdateProfile" message="tns:IJSService_UpdateProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/UpdateProfileResponse" message="tns:IJSService_UpdateProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserSkill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/AddUserSkill" message="tns:IJSService_AddUserSkill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/AddUserSkillResponse" message="tns:IJSService_AddUserSkill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserSkill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/RemoveUserSkill" message="tns:IJSService_RemoveUserSkill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/RemoveUserSkillResponse" message="tns:IJSService_RemoveUserSkill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/InsertJob" message="tns:IJSService_InsertJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/InsertJobResponse" message="tns:IJSService_InsertJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertSkill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/InsertSkill" message="tns:IJSService_InsertSkill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/InsertSkillResponse" message="tns:IJSService_InsertSkill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecentJobs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/RecentJobs" message="tns:IJSService_RecentJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/RecentJobsResponse" message="tns:IJSService_RecentJobs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobSkills">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/GetJobSkills" message="tns:IJSService_GetJobSkills_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/GetJobSkillsResponse" message="tns:IJSService_GetJobSkills_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserIdOfAJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/UpdateUserIdOfAJob" message="tns:IJSService_UpdateUserIdOfAJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/UpdateUserIdOfAJobResponse" message="tns:IJSService_UpdateUserIdOfAJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAMJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/UpdateAMJob" message="tns:IJSService_UpdateAMJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/UpdateAMJobResponse" message="tns:IJSService_UpdateAMJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeletedJobSkill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/UpdateDeletedJobSkill" message="tns:IJSService_UpdateDeletedJobSkill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/UpdateDeletedJobSkillResponse" message="tns:IJSService_UpdateDeletedJobSkill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAddedJobSkill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/UpdateAddedJobSkill" message="tns:IJSService_UpdateAddedJobSkill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/UpdateAddedJobSkillResponse" message="tns:IJSService_UpdateAddedJobSkill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/DeleteJob" message="tns:IJSService_DeleteJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/DeleteJobResponse" message="tns:IJSService_DeleteJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisplaySkills">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/DisplaySkills" message="tns:IJSService_DisplaySkills_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/DisplaySkillsResponse" message="tns:IJSService_DisplaySkills_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatuses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJSService/GetStatuses" message="tns:IJSService_GetStatuses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJSService/GetStatusesResponse" message="tns:IJSService_GetStatuses_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IJSService" type="tns:IJSService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetStreams">
+      <soap:operation soapAction="http://tempuri.org/IJSService/GetStreams" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FormatSkill">
+      <soap:operation soapAction="http://tempuri.org/IJSService/FormatSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTStatuses">
+      <soap:operation soapAction="http://tempuri.org/IJSService/GetTStatuses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchForConsultants">
+      <soap:operation soapAction="http://tempuri.org/IJSService/SearchForConsultants" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfile">
+      <soap:operation soapAction="http://tempuri.org/IJSService/GetProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddComment">
+      <soap:operation soapAction="http://tempuri.org/IJSService/AddComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViewComments">
+      <soap:operation soapAction="http://tempuri.org/IJSService/ViewComments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteComment">
+      <soap:operation soapAction="http://tempuri.org/IJSService/DeleteComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserIdByCommentId">
+      <soap:operation soapAction="http://tempuri.org/IJSService/GetUserIdByCommentId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFavourite">
+      <soap:operation soapAction="http://tempuri.org/IJSService/InsertFavourite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFavourite">
+      <soap:operation soapAction="http://tempuri.org/IJSService/DeleteFavourite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListOfFavJobs">
+      <soap:operation soapAction="http://tempuri.org/IJSService/GetListOfFavJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IJSService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login2">
+      <soap:operation soapAction="http://tempuri.org/IJSService/Login2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap:operation soapAction="http://tempuri.org/IJSService/Logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserType">
+      <soap:operation soapAction="http://tempuri.org/IJSService/GetUserType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStreamList">
+      <soap:operation soapAction="http://tempuri.org/IJSService/GetStreamList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumOfUsers">
+      <soap:operation soapAction="http://tempuri.org/IJSService/GetNumOfUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUser">
+      <soap:operation soapAction="http://tempuri.org/IJSService/InsertUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUser">
+      <soap:operation soapAction="http://tempuri.org/IJSService/FindUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByUserName">
+      <soap:operation soapAction="http://tempuri.org/IJSService/GetUserByUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/IJSService/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAccManagerJobExists">
+      <soap:operation soapAction="http://tempuri.org/IJSService/CheckAccManagerJobExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOneUser">
+      <soap:operation soapAction="http://tempuri.org/IJSService/GetOneUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUsernameBySessionId">
+      <soap:operation soapAction="http://tempuri.org/IJSService/FindUsernameBySessionId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisplayProfile">
+      <soap:operation soapAction="http://tempuri.org/IJSService/DisplayProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfile">
+      <soap:operation soapAction="http://tempuri.org/IJSService/UpdateProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserSkill">
+      <soap:operation soapAction="http://tempuri.org/IJSService/AddUserSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserSkill">
+      <soap:operation soapAction="http://tempuri.org/IJSService/RemoveUserSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertJob">
+      <soap:operation soapAction="http://tempuri.org/IJSService/InsertJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSkill">
+      <soap:operation soapAction="http://tempuri.org/IJSService/InsertSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecentJobs">
+      <soap:operation soapAction="http://tempuri.org/IJSService/RecentJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobSkills">
+      <soap:operation soapAction="http://tempuri.org/IJSService/GetJobSkills" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserIdOfAJob">
+      <soap:operation soapAction="http://tempuri.org/IJSService/UpdateUserIdOfAJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAMJob">
+      <soap:operation soapAction="http://tempuri.org/IJSService/UpdateAMJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeletedJobSkill">
+      <soap:operation soapAction="http://tempuri.org/IJSService/UpdateDeletedJobSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAddedJobSkill">
+      <soap:operation soapAction="http://tempuri.org/IJSService/UpdateAddedJobSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJob">
+      <soap:operation soapAction="http://tempuri.org/IJSService/DeleteJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisplaySkills">
+      <soap:operation soapAction="http://tempuri.org/IJSService/DisplaySkills" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatuses">
+      <soap:operation soapAction="http://tempuri.org/IJSService/GetStatuses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="JSService">
+    <wsdl:port name="BasicHttpBinding_IJSService" binding="tns:BasicHttpBinding_IJSService">
+      <soap:address location="http://localhost:1727/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

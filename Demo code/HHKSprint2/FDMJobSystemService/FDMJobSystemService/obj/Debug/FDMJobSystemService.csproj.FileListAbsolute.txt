@@ -1,0 +1,7 @@
+C:\Temp\Demo code\HHKSprint2\FDMJobSystemService\FDMJobSystemService\bin\FDMJobSystemService.dll
+C:\Temp\Demo code\HHKSprint2\FDMJobSystemService\FDMJobSystemService\bin\FDMJobSystemService.pdb
+C:\Temp\Demo code\HHKSprint2\FDMJobSystemService\FDMJobSystemService\bin\FDMJobSystemLogic.dll
+C:\Temp\Demo code\HHKSprint2\FDMJobSystemService\FDMJobSystemService\bin\FDMJobSystemLogic.pdb
+C:\Temp\Demo code\HHKSprint2\FDMJobSystemService\FDMJobSystemService\obj\Debug\ResolveAssemblyReference.cache
+C:\Temp\Demo code\HHKSprint2\FDMJobSystemService\FDMJobSystemService\obj\Debug\FDMJobSystemService.dll
+C:\Temp\Demo code\HHKSprint2\FDMJobSystemService\FDMJobSystemService\obj\Debug\FDMJobSystemService.pdb

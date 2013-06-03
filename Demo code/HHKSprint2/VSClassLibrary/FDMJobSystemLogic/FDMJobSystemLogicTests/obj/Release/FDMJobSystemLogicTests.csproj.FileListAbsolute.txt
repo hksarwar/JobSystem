@@ -1,0 +1,11 @@
+C:\Temp\Demo code\HHKSprint2\VSClassLibrary\FDMJobSystemLogic\FDMJobSystemLogicTests\bin\Release\FDMJobSystemLogicTests.dll
+C:\Temp\Demo code\HHKSprint2\VSClassLibrary\FDMJobSystemLogic\FDMJobSystemLogicTests\bin\Release\FDMJobSystemLogicTests.pdb
+C:\Temp\Demo code\HHKSprint2\VSClassLibrary\FDMJobSystemLogic\FDMJobSystemLogicTests\bin\Release\FDMJobSystemLogic.dll
+C:\Temp\Demo code\HHKSprint2\VSClassLibrary\FDMJobSystemLogic\FDMJobSystemLogicTests\bin\Release\nunit.framework.dll
+C:\Temp\Demo code\HHKSprint2\VSClassLibrary\FDMJobSystemLogic\FDMJobSystemLogicTests\bin\Release\FDMJobSystemLogic.pdb
+C:\Temp\Demo code\HHKSprint2\VSClassLibrary\FDMJobSystemLogic\FDMJobSystemLogicTests\bin\Release\Moq.pdb
+C:\Temp\Demo code\HHKSprint2\VSClassLibrary\FDMJobSystemLogic\FDMJobSystemLogicTests\bin\Release\Moq.xml
+C:\Temp\Demo code\HHKSprint2\VSClassLibrary\FDMJobSystemLogic\FDMJobSystemLogicTests\bin\Release\nunit.framework.xml
+C:\Temp\Demo code\HHKSprint2\VSClassLibrary\FDMJobSystemLogic\FDMJobSystemLogicTests\obj\Release\ResolveAssemblyReference.cache
+C:\Temp\Demo code\HHKSprint2\VSClassLibrary\FDMJobSystemLogic\FDMJobSystemLogicTests\obj\Release\FDMJobSystemLogicTests.dll
+C:\Temp\Demo code\HHKSprint2\VSClassLibrary\FDMJobSystemLogic\FDMJobSystemLogicTests\obj\Release\FDMJobSystemLogicTests.pdb

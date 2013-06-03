@@ -1,0 +1,174 @@
+CHARTER
+-----------------------------------------------
+Analyise Administrator functionality and report on potentail areas of risk
+
+#AREAS
+OS | Windows XP
+Strategy | Function Testing
+Strategy | Functional Analysis
+START
+-----------------------------------------------
+31/01/13 10.55 am
+TESTER
+-----------------------------------------------
+Stephen Harbage
+TASK BREAKDOWN
+-----------------------------------------------
+
+#DURATION
+short
+
+#TEST DESIGN AND EXECUTION
+
+
+#BUG INVESTIGATION AND REPORTING
+
+
+#SESSION SETUP
+5
+
+#CHARTER VS. OPPORTUNITY
+100/0
+DATA FILES
+-----------------------------------------------
+#N/A
+TEST NOTES
+-----------------------------------------------
+
+tried valid and invalid logins:
+valid user and invalid password
+valid password invalid user
+valid username and password but not for this app
+
+I looked at the home tab
+
+add user, and tried adding users without first, last name and location and all combinations
+
+I tried clicking on multiple drop down options incouding for consultants
+
+I need to test the new version Hinnah did
+
+I need to test that users were created for each type correctly
+
+I need to test that when deleting users they can't then login
+
+Delete user, I tested deleting users
+
+BUGS
+-----------------------------------------------
+#BUG 1
+Username and password and login buttons are not centrered
+
+#BUG 2
+no icon in login window
+
+#Bug 2.1
+Curser too high in login text box
+
+#BUG 3
+Illegal image?
+
+#BUG 4
+'Your details:' instead of 'the following are your detail
+
+#BUG 5
+It says 'AdminApp' in title bar
+
+#BUG 6
+On Home tab, text is not aligned
+
+#BUG 7
+'DeleteUser' tab
+
+#BUG 8
+'Add User' tab, text and button not alienged
+
+#BUG 9
+White gap at the bottom of add user and stream drop box
+
+#BUG 10
+When press on 'add new user' with no fields entered it only gives error for 'location' missing
+
+#BUG 11
+Add new user button should be 'Add New User'
+
+#BUG 12
+Delete user tab, scroll bar at bottom
+
+#BUG 12.1
+Bouncing text on all fields, when using arrow keys back and forth
+
+#BUG 12.2
+Can delete yourself!
+
+#BUG 13
+Delete user tab, text should be centre alleigned
+
+#BUG 14
+Delete user tab, when pressing 'find user' without any text it has ':' and gap afterwards
+
+#BUG 15
+'Add User' tab, 'Please enter last name' etc should be red
+
+#BUG 16
+Delete user tab, when pressing 'find user' without any text it has ':' and gap before it
+
+#BUG 17
+Delete user tab, when hovering over titles of fields right down bar goes white
+
+#BUG 18
+Delete user tab, 'firstName'
+
+#BUG 19
+Delete user tab, 'lastName'
+
+#BUG 20
+Delete user tab, 'enter details to delete the user' not alaigned
+
+#BUG 21
+Delete user tab, 'are you sure you want to 
+Delete the Selected User'
+
+#BUG 22
+Once added a user, text stays in 'add user'
+
+#BUG 23.1
+When press delete user with nothing selected, it crashes
+
+#BUG 23.2
+Can resisze window
+
+#BUG 24
+Tab text isn't in the centre, is too high
+
+#BUG 25
+Large gap on 'add user' under 'add the following details'
+
+#BUG 26
+-So when trying to delete number 2 instead of number 1, it then deletes number 1! And then it can't delete number 2!
+-Also add abiliy to search without having to put the '1' at the end
+
+#BUG 26.1
+Can add user with same name twice eg two john.smith1's exist
+
+-----------------------------------------------
+#ISSUE 1
+Very slow when first clicked on 'login'
+
+#ISSUE 2
+Images might be breaking copyright
+
+#ISSUE 3
+Why does it give her details?
+
+#ISSUE 4
+Can they be on 'all' streams?
+
+#ISSUE 5
+Might be better once clicked on ok to adding a user it returns to 'add user' as may want to enter multiple
+
+#ISSUE 6
+A way to automate adding and removing users might help in future eg sarah probably has a spreadsheet she could feed into system
+
+#ISSUE 7
+Instead of location should it say 'FDM office'

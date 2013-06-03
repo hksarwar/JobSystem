@@ -1,0 +1,15 @@
+C:\Temp\Demo code\HHKSprint2\AccountManagerApp\AccountManagerApp\bin\Debug\AccountManagerApp.exe.config
+C:\Temp\Demo code\HHKSprint2\AccountManagerApp\AccountManagerApp\bin\Debug\AccountManagerApp.exe
+C:\Temp\Demo code\HHKSprint2\AccountManagerApp\AccountManagerApp\bin\Debug\AccountManagerApp.pdb
+C:\Temp\Demo code\HHKSprint2\AccountManagerApp\AccountManagerApp\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Temp\Demo code\HHKSprint2\AccountManagerApp\AccountManagerApp\obj\x86\Debug\AccountManagerApp.EditSkillsForm.resources
+C:\Temp\Demo code\HHKSprint2\AccountManagerApp\AccountManagerApp\obj\x86\Debug\AccountManagerApp.ChangePwdForm.resources
+C:\Temp\Demo code\HHKSprint2\AccountManagerApp\AccountManagerApp\obj\x86\Debug\AccountManagerApp.EmailForm.resources
+C:\Temp\Demo code\HHKSprint2\AccountManagerApp\AccountManagerApp\obj\x86\Debug\AccountManagerApp.LogoutForm.resources
+C:\Temp\Demo code\HHKSprint2\AccountManagerApp\AccountManagerApp\obj\x86\Debug\AccountManagerApp.LoginForm.resources
+C:\Temp\Demo code\HHKSprint2\AccountManagerApp\AccountManagerApp\obj\x86\Debug\AccountManagerApp.MainForm.resources
+C:\Temp\Demo code\HHKSprint2\AccountManagerApp\AccountManagerApp\obj\x86\Debug\AccountManagerApp.Properties.Resources.resources
+C:\Temp\Demo code\HHKSprint2\AccountManagerApp\AccountManagerApp\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Temp\Demo code\HHKSprint2\AccountManagerApp\AccountManagerApp\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Temp\Demo code\HHKSprint2\AccountManagerApp\AccountManagerApp\obj\x86\Debug\AccountManagerApp.exe
+C:\Temp\Demo code\HHKSprint2\AccountManagerApp\AccountManagerApp\obj\x86\Debug\AccountManagerApp.pdb
